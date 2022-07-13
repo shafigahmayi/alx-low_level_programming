@@ -1,33 +1,34 @@
 #include <stdio.h>
+
 /**
- * main - Prints combination of numbers
+ * main - output all single digit number of base 10
  *
- * Return: Always (Success)
+ * Return: 0 if successful
  */
 int main(void)
 {
-	int c, i;
+	int var;
 
-	for (c = '0'; c <= '9'; c++)
+	for (var = 0; var < 9; var++)
 	{
-		for (i = '0'; i <= '9'; i++)
-		{
-			for (i = '0'; i <= '9'; i++)
-			{
-				if (c < i)
-				{
-					putchchar(c);
-					putchar(i);
+		int ii;
 
-					if (c != '8' || (c == '8' && i != '9'))
-					{
-						putchar(',');
-						putchar(' ');
-					}
-				}
+		for (ii = var + 1; ii < 10; ii++)
+		{
+			putchar((var % 10) + '0');
+			putchar((ii % 10) + '0');
+
+			if (var != 8)
+			{
+				putchar(',');
+				putchar(' ');
 			}
+			else
+				continue;
 		}
 	}
-}
+
 	putchar('\n');
+
 	return (0);
+}
