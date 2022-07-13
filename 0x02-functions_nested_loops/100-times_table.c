@@ -1,95 +1,50 @@
 #include "main.h"
-
 /**
- * print - function to print recursively using _putchar
- * @var: variable to be printed
+ * print_times_table - prints timetable only if < 15
+ * @n: use to input up to the timetable you want
+ * Description: i think i am getting into C
+ * Return: void and result
  */
-
-	void print(int var)
-
-	{
-
-	if (var / 10)
-
-		print(var / 10);
-
-	_putchar('0' + (var % 10));
-
-	}
-
-/**
- * print_times_table - prints the n times table, starting with 0
- * @n: time table to print
- */
-
-	void print_times_table(int n)
-
-	{
-
-	int ii, jj, mul;
+void print_times_table(int n)
+{
+	int row = 0, column, result;
 
 	if (n < 0 || n > 15)
-
 		return;
 
-	for (ii = 0; ii <= n; ii++)
-
+	while (row <= n)
 	{
-
-		for (jj = 0; jj <= n; jj++)
-
+		for (column = 0; column <= n; column++)
 		{
-
-			mul = ii * jj;
-
-			if (jj == 0)
-
-				_putchar('0' + mul);
-
-			else if (mul < 10)
-
+			result = row * column;
+			if (column == 0)
+				_putchar(result + '0');
+			else if (result < 10)
 			{
-
 				_putchar(' ');
-
 				_putchar(' ');
-
-				_putchar('0' + mul);
-
+				_putchar(result + '0');
+			}
+			else if (result < 100)
+			{
+				_putchar(' ');
+				_putchar(result / 10 + '0');
+				_putchar(result % 10 + '0');
+			}
+			else
+			{
+				_putchar(result / 100 + '0');
+				_putchar((result - 100) / 10 + '0');
+				_putchar(result % 10 + '0');
 			}
 
-			else if (mul < 100)
-
+			if (column < n)
 			{
-
-				_putchar(' ');
-
-				print(mul);
-
-			}
-
-				else
-
-			{
-
-				print(mul);
-
-			}
-
-			if (jj < n)
-
-			{
-
 				_putchar(',');
-
 				_putchar(' ');
-
 			}
-
 		}
-
 		_putchar('\n');
-
+		row++;
 	}
-
 }
