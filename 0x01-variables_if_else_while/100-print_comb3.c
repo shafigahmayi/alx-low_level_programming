@@ -31,4 +31,8 @@ int main(void)
 	putchar('\n');
 
 	return (0);
+<<<<<<< HEAD
+	}
+=======
 }
+>>>>>>> 23426f0b4d9d02e27ce7565a2c830d3f4a8aea84
