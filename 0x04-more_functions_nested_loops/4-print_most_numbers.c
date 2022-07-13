@@ -1,21 +1,18 @@
 #include "main.h"
-#include <stdio.h>
+
 /**
- * print_most_numbers - print from 0 to 9 except 2 and 4
- * Description: do not for get your not sign
- * Return: as usual 0
+ * print_most_numbers - prints
+ * Return: void
  */
 
 void print_most_numbers(void)
 {
-	int i = 0;
+	char c;
 
-	for (i = 0; i <= 9; i++)
+	for (c = '0'; c <= '9'; c++)
 	{
-		if (i != 2 && i != 4)
-		{
-			_putchar(i + '0');
-		}
+		if (!(c == '2' || c == '4'))
+			_putchar(c);
 	}
 	_putchar('\n');
 }

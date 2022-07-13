@@ -1,28 +1,23 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * print_square - print asquare using ##
- * @n : number of lines
+ * print_square - prints a square of size size
+ * @size: size of the square
  * Return: void
  */
 
-
-void print_square(int n)
+void print_square(int size)
 {
-	int x;
-	int y;
+	int i, j;
 
-	for (y = 0; y < n; y++)
+	if (size <= 0)
+		_putchar('\n');
+	for (i = 0; i < size; i++)
 	{
-		for (x = 0; x < n; x++)
+		for (j = 0; j < (size); j++)
 		{
 			_putchar('#');
 		}
-		_putchar('\n');
-	}
-	if (n <= 0)
-	{
 		_putchar('\n');
 	}
 }

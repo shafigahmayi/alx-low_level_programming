@@ -1,10 +1,9 @@
 #include "main.h"
 
 /**
- * _isupper - i want o print aupper letter
- * @c: parameter
- * Desctiption: lets test with range of capital letter
- * Return: 1 for capital letter and 0 for other
+ * _isupper - uppercase letters
+ * @c: character to check
+ * Return: 0 or 1
  */
 
 int _isupper(int c)

@@ -1,25 +1,21 @@
+#include <stdio.h>
+
 #include "main.h"
 
 /**
- * main - orints primes number to
- * Description: i am using the multiple of numbers
- * Return: a0 always succes
+ * main - prints the largest prime factor of 612852475143
+ * Return: always 0
  */
 
 int main(void)
 {
-	long int x = 612852475143;
-	long int py;
+	unsigned long int i, n = 612852475143;
 
-	for (py = 2; py < x; py++)
+	for (i = 3; i < 782849; i = i + 2)
 	{
-		if (x % py == 0)
-		{
-			x = x / py;
-		}
+		while ((n % i == 0) && (n != i))
+			n = n / i;
 	}
-	printf("%ld\n", py);
-
+	printf("%lu\n", n);
 	return (0);
 }
-

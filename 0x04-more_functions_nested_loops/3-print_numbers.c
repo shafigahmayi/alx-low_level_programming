@@ -1,19 +1,17 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * print_numbers - print number from 0 to 9
- * Description: it is easier now
- * Return: always 0
+ * print_numbers - print 0123456789
+ * Return: void
  */
 
 void print_numbers(void)
 {
-	int i = 0;
+	char c;
 
-	for (i = 0; i <= 9; i++)
+	for (c = '0'; c <= '9'; c++)
 	{
-		_putchar(i + '0');
+		_putchar(c);
 	}
 	_putchar('\n');
 }
