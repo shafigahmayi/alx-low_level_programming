@@ -1,20 +1,55 @@
-#include "main.h"
+#include "holberton.h"
+
+
 
 /**
- * strcat -concatinstes strings
- * @src: The source string to be appended to @dest.
- * @dest: for charcter
- * Return: A pointer to the destination string @dest.
+ * *_strcat - function commute srtings
+ * @dest: param pointer to a char
+ * @src: param pointer to a char
+ * Return: return value of dest
  */
-char *strcat(char *dest, const char *src)
+
+
+char *_strcat(char *dest, char *src)
+
 {
-	int index = 0, dest_len = 0;
 
-	while (dest[index++])
-		dest_len++;
+	int i;
 
-	for (index = 0; src[index]; index++)
-		dest[dest_len++] = src[index];
+	int j;
+
+
+
+	i = 0;
+
+	j = 0;
+
+
+	while (dest[i] != '\0')
+
+	{
+
+		i++;
+
+	}
+
+
+
+	while (src[j] != '\0')
+
+	{
+
+		dest[i] = src[j];
+
+		j++;
+
+		i++;
+
+	}
+
+
+	dest[i] = '\0';
 
 	return (dest);
+
 }
